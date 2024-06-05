@@ -10,14 +10,11 @@ dotenv.config();
 
 const app = express();
 
-// Connect to database
 connectDB();
 
-// Middleware
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-// Routes
 app.use('/api', productRoutes);
 app.use('/api', orderRoutes);
 
